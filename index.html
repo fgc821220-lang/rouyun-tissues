@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>口粮纸巾 — 柔软如云，呵护每寸肌肤</title>
+<title>醇韵雪茄 — 进口精选，品味非凡人生</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -61,37 +61,56 @@
   .hero .text p { color: var(--muted); font-size: 1.08rem; margin-top: 14px; max-width: 460px; }
   .hero .text .cta-row { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
 
-  /* tissue box CSS art */
-  .hero .visual { position: relative; width: 280px; height: 320px; flex-shrink: 0; margin: 0 auto; }
-  .tissue-box {
-    position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-    width: 180px; height: 140px; border-radius: 12px;
-    background: linear-gradient(145deg, #fff 0%, #f7f3ee 50%, #f0e8dc 100%);
-    box-shadow: 0 8px 36px rgba(0,0,0,.1), inset 0 1px 0 rgba(255,255,255,.8);
-    border: 1px solid rgba(0,0,0,.06);
+  /* cigar CSS art */
+  .hero .visual { position: relative; width: 280px; height: 320px; flex-shrink: 0; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
+  .cigar-wrapper { position: relative; width: 260px; height: 260px; }
+  .cigar {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg);
+    width: 200px; height: 36px; border-radius: 18px;
+    background: linear-gradient(180deg, #6d4c41 0%, #4e342e 30%, #8d6e63 50%, #5d4037 70%, #3e2723 100%);
+    box-shadow: 0 8px 30px rgba(0,0,0,.3);
   }
-  .tissue-box .opening {
-    position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
-    width: 80px; height: 6px; background: #e0d5c5; border-radius: 3px;
-    box-shadow: inset 0 -1px 0 rgba(0,0,0,.1);
+  .cigar .band {
+    position: absolute; top: -6px; left: 60px; width: 50px; height: 48px; border-radius: 4px;
+    background: linear-gradient(180deg, #ffd54f, #ff8f00);
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: .55rem; font-weight: 900; color: #3e2723; letter-spacing: .1em;
   }
-  .tissue-box .tissue-pop {
-    position: absolute; top: -22px; left: 50%; transform: translateX(-50%);
-    width: 70px; height: 40px; background: #fff;
-    border-radius: 3px 3px 8px 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,.06);
-    animation: tissueWave 2.5s ease-in-out infinite;
+  .cigar .ash {
+    position: absolute; right: -14px; top: 50%; transform: translateY(-50%);
+    width: 16px; height: 30px; border-radius: 8px 18px 18px 8px;
+    background: linear-gradient(90deg, #bdbdbd, #9e9e9e, #757575);
+    box-shadow: 0 0 6px rgba(255,255,255,.2);
   }
-  .tissue-box .tissue-pop2 {
-    position: absolute; top: -12px; left: 52%; transform: translateX(-50%) rotate(6deg);
-    width: 62px; height: 30px; background: #fefefe;
-    border-radius: 3px 3px 6px 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.05);
-    animation: tissueWave 3s ease-in-out 1s infinite;
+  .smoke {
+    position: absolute; top: -10px; right: -20px;
+    width: 30px; height: 30px; background: rgba(200,200,200,.3);
+    border-radius: 50%; filter: blur(6px);
+    animation: smokeRise 2.5s ease-out infinite;
   }
-  @keyframes tissueWave {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(-6px); }
+  .smoke2 {
+    position: absolute; top: -30px; right: -30px;
+    width: 40px; height: 40px; background: rgba(200,200,200,.2);
+    border-radius: 50%; filter: blur(8px);
+    animation: smokeRise 3s ease-out 1s infinite;
+  }
+  .smoke3 {
+    position: absolute; top: -50px; right: -10px;
+    width: 25px; height: 25px; background: rgba(200,200,200,.15);
+    border-radius: 50%; filter: blur(7px);
+    animation: smokeRise 3.5s ease-out .5s infinite;
+  }
+  @keyframes smokeRise {
+    0% { opacity: .6; transform: translate(0, 0) scale(1); }
+    50% { opacity: .3; transform: translate(-10px, -30px) scale(2); }
+    100% { opacity: 0; transform: translate(-30px, -70px) scale(3); }
+  }
+  /* decorative circle behind cigar */
+  .cigar-glow {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 180px; height: 180px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(139, 90, 43, .12) 0%, transparent 70%);
   }
 
   /* sections */
@@ -136,10 +155,10 @@
     width: 100%; height: 220px; display: flex; align-items: center; justify-content: center;
     position: relative; overflow: hidden;
   }
-  .img-box.p1 { background: linear-gradient(135deg, #fce4ec, #f8bbd0); }
-  .img-box.p2 { background: linear-gradient(135deg, #e3f2fd, #90caf9); }
-  .img-box.p3 { background: linear-gradient(135deg, #e8f5e9, #a5d6a7); }
-  .img-box.p4 { background: linear-gradient(135deg, #fff3e0, #ffcc80); }
+  .img-box.p1 { background: linear-gradient(135deg, #3e2723, #5d4037); }
+  .img-box.p2 { background: linear-gradient(135deg, #1a237e, #3949ab); }
+  .img-box.p3 { background: linear-gradient(135deg, #1b5e20, #388e3c); }
+  .img-box.p4 { background: linear-gradient(135deg, #4a148c, #7b1fa2); }
 
   /* Product image (from upload) */
   .img-box img.product-img {
@@ -298,7 +317,7 @@
 <!-- Nav -->
 <nav>
   <div class="inner">
-    <div class="logo"><span>☁️</span>口粮纸巾</div>
+    <div class="logo"><span>🥃</span>醇韵雪茄</div>
     <ul class="links">
       <li><a href="#features">产品优势</a></li>
       <li><a href="#products">系列产品</a></li>
@@ -314,17 +333,22 @@
     <div class="text">
       <div class="badge">2026 全新上市</div>
       <h1>柔软如云，<br><em>呵护每寸肌肤</em></h1>
-      <p>口粮纸巾 — 原生木浆制造，三层加厚，云朵般轻柔触感。让每一次擦拭都成为享受。</p>
+      <p>精选古巴、多米尼加进口雪茄，大师级手工卷制，恒温窖藏醇化。每一口都是尊贵享受。</p>
       <div class="cta-row">
         <a href="#products" class="btn btn-primary">🛒 查看产品</a>
         <a href="#cta" class="btn btn-outline">📋 合作咨询</a>
       </div>
     </div>
     <div class="visual">
-      <div class="tissue-box">
-        <div class="opening"></div>
-        <div class="tissue-pop"></div>
-        <div class="tissue-pop2"></div>
+      <div class="cigar-wrapper">
+        <div class="cigar-glow"></div>
+        <div class="cigar">
+          <div class="band">醇韵</div>
+          <div class="ash"></div>
+        </div>
+        <div class="smoke"></div>
+        <div class="smoke2"></div>
+        <div class="smoke3"></div>
       </div>
     </div>
   </div>
@@ -334,11 +358,11 @@
 <section class="features" id="features">
   <div class="container">
     <div class="section-badge fade-up">核心卖点</div>
-    <h2 class="section-title fade-up">为什么选择口粮？</h2>
-    <p class="section-sub fade-up">每一张纸巾，都经过 28 道工序精心打磨。</p>
+    <h2 class="section-title fade-up">为什么选择醇韵？</h2>
+    <p class="section-sub fade-up">每一支雪茄，都经过 200+ 天窖藏醇化，匠心呈现。</p>
     <div class="features-grid">
       <div class="feat-card fade-up"><div class="icon">🧻</div><h3>三层加厚</h3><p>三层压花工艺，韧性强不破不裂，湿水也不易烂。</p></div>
-      <div class="feat-card fade-up"><div class="icon">🌿</div><h3>原生木浆</h3><p>100% 进口原生木浆，不含荧光剂，母婴级安全标准。</p></div>
+      <div class="feat-card fade-up"><div class="icon">🤲</div><h3>手工卷制</h3><p>资深卷制师纯手工打造，每支雪茄历经 200+ 道工序，做工精湛。</p></div>
       <div class="feat-card fade-up"><div class="icon">🎨</div><h3>精致包装</h3><p>渐变色彩搭配浮雕压纹，高颜值包装适配各种家居风格。</p></div>
       <div class="feat-card fade-up"><div class="icon">💧</div><h3>强力吸水</h3><p>独特纤维结构，瞬间吸水不残留，擦脸擦手都舒适。</p></div>
       <div class="feat-card fade-up"><div class="icon">☁️</div><h3>云柔触感</h3><p>超细纤维带来云端般亲肤体验，反复擦拭不泛红。</p></div>
@@ -352,50 +376,50 @@
   <div class="container">
     <div class="section-badge fade-up">系列产品</div>
     <h2 class="section-title fade-up">四款包装，满足不同场景</h2>
-    <p class="section-sub fade-up">每一款都是精心设计的艺术品，让纸巾盒成为桌面点缀。</p>
+    <p class="section-sub fade-up">每一款都是精心设计的艺术品，每一支都是雪茄艺术的极致表达。</p>
     <div class="products-grid">
       <div class="product-card fade-up">
         <div class="img-box p1" id="img-box-0">
-          <img class="product-img" id="pimg-0" src="" alt="樱花粉 · 浪漫系列" onerror="this.style.display='none'">
-          <span class="img-fallback">🌸</span>
+          <img class="product-img" id="pimg-0" src="" alt="高希霸 · 经典系列" onerror="this.style.display='none'">
+          <span class="img-fallback">🥇</span>
         </div>
         <div class="info">
-          <h3>樱花粉 · 浪漫系列</h3>
-          <p class="spec">温柔渐变粉 · 200抽 × 3层</p>
-          <span class="tag">卧室优选</span>
+          <h3>高希霸 · 经典系列</h3>
+          <p class="spec">古巴原产 · 手工长茄芯</p>
+          <span class="tag">镇店之选</span>
         </div>
       </div>
       <div class="product-card fade-up">
         <div class="img-box p2" id="img-box-1">
-          <img class="product-img" id="pimg-1" src="" alt="海洋蓝 · 清新系列" onerror="this.style.display='none'">
-          <span class="img-fallback">🌊</span>
+          <img class="product-img" id="pimg-1" src="" alt="大卫杜夫 · 至臻系列" onerror="this.style.display='none'">
+          <span class="img-fallback">🥈</span>
         </div>
         <div class="info">
-          <h3>海洋蓝 · 清新系列</h3>
-          <p class="spec">冰蓝渐变 · 200抽 × 3层</p>
-          <span class="tag">浴室/办公</span>
+          <h3>大卫杜夫 · 至臻系列</h3>
+          <p class="spec">多米尼加 · 陈年醇化</p>
+          <span class="tag">商务首选</span>
         </div>
       </div>
       <div class="product-card fade-up">
         <div class="img-box p3" id="img-box-2">
-          <img class="product-img" id="pimg-2" src="" alt="薄荷绿 · 自然系列" onerror="this.style.display='none'">
-          <span class="img-fallback">🍃</span>
+          <img class="product-img" id="pimg-2" src="" alt="奥利瓦 · 珍藏系列" onerror="this.style.display='none'">
+          <span class="img-fallback">🥉</span>
         </div>
         <div class="info">
-          <h3>薄荷绿 · 自然系列</h3>
-          <p class="spec">抹茶渐变 · 200抽 × 3层</p>
-          <span class="tag">客厅首选</span>
+          <h3>奥利瓦 · 珍藏系列</h3>
+          <p class="spec">尼加拉瓜 · 浓郁醇厚</p>
+          <span class="tag">老饕挚爱</span>
         </div>
       </div>
       <div class="product-card fade-up">
         <div class="img-box p4" id="img-box-3">
-          <img class="product-img" id="pimg-3" src="" alt="暖阳橙 · 经典系列" onerror="this.style.display='none'">
-          <span class="img-fallback">🌅</span>
+          <img class="product-img" id="pimg-3" src="" alt="蒙特 · 限量系列" onerror="this.style.display='none'">
+          <span class="img-fallback">💎</span>
         </div>
         <div class="info">
-          <h3>暖阳橙 · 经典系列</h3>
-          <p class="spec">蜜橘渐变 · 200抽 × 3层</p>
-          <span class="tag">全场景通用</span>
+          <h3>蒙特 · 限量系列</h3>
+          <p class="spec">古巴限量 · 年度珍品</p>
+          <span class="tag">收藏级别</span>
         </div>
       </div>
     </div>
@@ -405,14 +429,14 @@
 <!-- Why Us -->
 <section class="why-us" id="why">
   <div class="container">
-    <div class="section-badge fade-up">品质保障</div>
-    <h2 class="section-title fade-up">看得见的放心</h2>
-    <p class="section-sub fade-up">从原料到出厂，全程可溯源，安心之选。</p>
+    <div class="section-badge fade-up">品牌承诺</div>
+    <h2 class="section-title fade-up">值得信赖的品质</h2>
+    <p class="section-sub fade-up">从产地到手中，全程冷链恒温运输，安心品鉴。</p>
     <div class="why-grid fade-up">
-      <div class="why-item"><div class="n">1</div><div><h3>原料溯源</h3><p>每批次木浆均可追溯至原产地林场，确保品质纯正。</p></div></div>
-      <div class="why-item"><div class="n">2</div><div><h3>无菌车间</h3><p>万级净化车间生产，全程紫外线灭菌，杜绝二次污染。</p></div></div>
-      <div class="why-item"><div class="n">3</div><div><h3>权威检测</h3><p>通过 SGS 及国家纸制品质量检测，不含 23 种有害物质。</p></div></div>
-      <div class="why-item"><div class="n">4</div><div><h3>环保包装</h3><p>包装盒采用可降解材料，印刷油墨符合食品接触级标准。</p></div></div>
+      <div class="why-item"><div class="n">1</div><div><h3>原产地直采</h3><p>直接与古巴、多米尼加顶级庄园合作，源头把控品质，拒绝中间环节。</p></div></div>
+      <div class="why-item"><div class="n">2</div><div><h3>恒温冷链运输</h3><p>全球冷链物流，全程温湿度监控，确保雪茄状态始终如一。</p></div></div>
+      <div class="why-item"><div class="n">3</div><div><h3>防伪溯源系统</h3><p>每盒附带唯一防伪码，扫码可查产地、卷制日期、进口报关。</p></div></div>
+      <div class="why-item"><div class="n">4</div><div><h3>专业养护指南</h3><p>购茄即赠专业养护指南，资深顾问一对一指导保存与品鉴技巧。</p></div></div>
     </div>
   </div>
 </section>
@@ -420,19 +444,19 @@
 <!-- CTA -->
 <section class="cta-section" id="cta">
   <div class="container">
-    <h2 class="section-title fade-up">开启口粮体验</h2>
-    <p class="section-sub fade-up" style="margin:0 auto 28px;">批发采购、OEM 定制、品牌代理，欢迎洽谈合作。</p>
+    <h2 class="section-title fade-up">开启醇韵之旅</h2>
+    <p class="section-sub fade-up" style="margin:0 auto 28px;">企业团购、礼品定制、雪茄品鉴会预约，欢迎垂询。</p>
     <div class="fade-up" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-      <a href="#" class="btn btn-primary" style="font-size:1rem;padding:14px 36px;">📞 联系销售</a>
-      <a href="#" class="btn btn-outline" style="font-size:1rem;padding:14px 36px;">📋 索取样品</a>
+      <a href="#" class="btn btn-primary" style="font-size:1rem;padding:14px 36px;">📞 在线咨询</a>
+      <a href="#" class="btn btn-outline" style="font-size:1rem;padding:14px 36px;">📋 预约品鉴</a>
     </div>
   </div>
 </section>
 
 <!-- Footer -->
 <footer>
-  <div class="flinks"><a href="#">关于口粮</a><a href="#">产品中心</a><a href="#">招商加盟</a><a href="#">新闻动态</a><a href="#">联系我们</a></div>
-  <div>© 2026 口粮纸业有限公司. 保留所有权利.</div>
+  <div class="flinks"><a href="#">关于醇韵</a><a href="#">产品中心</a><a href="#">招商加盟</a><a href="#">新闻动态</a><a href="#">联系我们</a></div>
+  <div>© 2026 醇韵雪茄有限公司. 保留所有权利.</div>
 </footer>
 
 <!-- ============================================= -->
@@ -466,10 +490,10 @@
 <script>
 // ============ Product config ============
 const PRODUCTS = [
-  { id: 'pimg-0', boxId: 'img-box-0', name: '樱花粉 · 浪漫系列', color: 'p1' },
-  { id: 'pimg-1', boxId: 'img-box-1', name: '海洋蓝 · 清新系列', color: 'p2' },
-  { id: 'pimg-2', boxId: 'img-box-2', name: '薄荷绿 · 自然系列', color: 'p3' },
-  { id: 'pimg-3', boxId: 'img-box-3', name: '暖阳橙 · 经典系列', color: 'p4' },
+  { id: 'pimg-0', boxId: 'img-box-0', name: '高希霸 · 经典系列', color: 'p1' },
+  { id: 'pimg-1', boxId: 'img-box-1', name: '大卫杜夫 · 至臻系列', color: 'p2' },
+  { id: 'pimg-2', boxId: 'img-box-2', name: '奥利瓦 · 珍藏系列', color: 'p3' },
+  { id: 'pimg-3', boxId: 'img-box-3', name: '蒙特 · 限量系列', color: 'p4' },
 ];
 
 const STORAGE_KEY = 'rouyun_product_images';
