@@ -186,14 +186,19 @@
   /* Admin Upload Panel */
   /* ============================================= */
   .admin-toggle {
-    position: fixed; bottom: 24px; right: 24px; z-index: 200;
-    width: 48px; height: 48px; border-radius: 50%; background: var(--accent);
-    color: #fff; border: none; cursor: pointer; font-size: 1.4rem;
-    box-shadow: 0 4px 20px rgba(232,115,74,.4);
+    position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+    padding: 12px 22px; border-radius: 999px; background: #e8734a;
+    color: #fff; border: none; cursor: pointer; font-size: .95rem; font-weight: 700;
+    box-shadow: 0 6px 30px rgba(232,115,74,.5);
     display: flex; align-items: center; justify-content: center;
-    transition: all .3s;
+    gap: 7px; letter-spacing: .02em;
+    transition: all .3s; animation: adminPulse 2s ease-in-out infinite;
   }
-  .admin-toggle:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(232,115,74,.55); }
+  @keyframes adminPulse {
+    0%, 100% { box-shadow: 0 6px 30px rgba(232,115,74,.5); }
+    50% { box-shadow: 0 6px 40px rgba(232,115,74,.75); }
+  }
+  .admin-toggle:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(232,115,74,.65); }
   .admin-toggle.active { background: #555; }
 
   /* Overlay */
@@ -283,7 +288,7 @@
 
   @media (max-width: 600px) {
     .admin-panel { width: 100vw; }
-    .admin-toggle { bottom: 16px; right: 16px; }
+    .admin-toggle { bottom: 16px; right: 10px; padding: 10px 16px; font-size: .84rem; }
     .why-grid { grid-template-columns: 1fr; }
   }
 </style>
@@ -456,7 +461,7 @@
 <div class="toast" id="toast"></div>
 
 <!-- Admin toggle button -->
-<button class="admin-toggle" id="adminToggle" title="产品图片管理">⚙</button>
+<button class="admin-toggle" id="adminToggle" title="上传产品图片">🖼️ 上传图片</button>
 
 <script>
 // ============ Product config ============
